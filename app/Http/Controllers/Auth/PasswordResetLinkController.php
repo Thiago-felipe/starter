@@ -23,6 +23,7 @@ class PasswordResetLinkController extends Controller
      * 
      * @OA\Post(
      *     path="/api/forgot-password",
+     *     operationId="forgotPassword",
      *     summary="Solicitar link de redefinição de senha",
      *     description="Envia um e-mail com o link para redefinir a senha",
      *     tags={"Password Reset"},

@@ -20,6 +20,7 @@ class VerifyEmailController extends Controller
      * 
      * @OA\Get(
      *     path="/api/verify-email/{id}/{hash}",
+     *     operationId="verifyEmail",
      *     summary="Verificar endereço de e-mail",
      *     description="Verifica o endereço de e-mail do usuário usando o link enviado por e-mail",
      *     tags={"Email Verification"},

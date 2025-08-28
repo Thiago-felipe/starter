@@ -26,6 +26,7 @@ class RegisteredUserController extends Controller
      * 
      * @OA\Post(
      *     path="/api/register",
+     *     operationId="register",
      *     summary="Registrar novo usuário",
      *     description="Cria uma nova conta de usuário e autentica automaticamente",
      *     tags={"Registration"},

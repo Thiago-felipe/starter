@@ -23,13 +23,14 @@ return [
                 'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', true),
 
                 /*
-                * Edit to set path where swagger ui assets should be stored
-                */
+                 * Edit to set path where swagger ui assets should be stored
+                 */
                 'swagger_ui_assets_path' => env('L5_SWAGGER_UI_ASSETS_PATH', 'vendor/swagger-api/swagger-ui/dist/'),
 
                 /*
                  * File name of the generated json documentation file
                  */
+                'docs' => storage_path('api-docs'),
                 'docs_json' => 'api-docs.json',
 
                 /*
@@ -105,72 +106,23 @@ return [
         ],
 
         'scanOptions' => [
-            /**
-             * Configuration for default processors. Allows to pass processors configuration to swagger-php.
-             *
-             * @link https://zircote.github.io/swagger-php/reference/processors.html
-             */
             'default_processors_configuration' => [
-            /** Example */
-            /**
-             * 'operationId.hash' => true,
-             * 'pathFilter' => [
-             * 'tags' => [
-             * '/pets/',
-             * '/store/',
-             * ],
-             * ],.
-             */
+                // 'operationId' => true,
+                // 'operationId.hash' => false,
             ],
 
-            /**
-             * analyser: defaults to \OpenApi\StaticAnalyser .
-             *
-             * @see \OpenApi\scan
-             */
             'analyser' => null,
-
-            /**
-             * analysis: defaults to a new \OpenApi\Analysis .
-             *
-             * @see \OpenApi\scan
-             */
             'analysis' => null,
-
-            /**
-             * Custom query path processors classes.
-             *
-             * @link https://github.com/zircote/swagger-php/tree/master/Examples/processors/schema-query-parameter
-             * @see \OpenApi\scan
-             */
-            'processors' => [
-                // new \App\SwaggerProcessors\SchemaQueryParameter(),
-            ],
-
-            /**
-             * pattern: string       $pattern File pattern(s) to scan (default: *.php) .
-             *
-             * @see \OpenApi\scan
-             */
+            'processors' => [], // ✅ Deixe VAZIO ou com processors padrão se necessário
             'pattern' => null,
-
-            /*
-             * Absolute path to directories that should be excluded from scanning
-             * @note This option overwrites `paths.excludes`
-             * @see \OpenApi\scan
-             */
             'exclude' => [],
 
-            /*
-             * Allows to generate specs either for OpenAPI 3.0.0 or OpenAPI 3.1.0.
-             * By default the spec will be in version 3.0.0
-             */
             'open_api_spec_version' => env('L5_SWAGGER_OPEN_API_SPEC_VERSION', \L5Swagger\Generator::OPEN_API_DEFAULT_SPEC_VERSION),
         ],
 
         /*
          * API security definitions. Will be generated into documentation file.
-        */
+         */
         'securityDefinitions' => [
             'securitySchemes' => [
                 /*

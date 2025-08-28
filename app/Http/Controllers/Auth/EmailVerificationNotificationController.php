@@ -20,6 +20,7 @@ class EmailVerificationNotificationController extends Controller
      * 
      * @OA\Post(
      *     path="/api/email/verification-notification",
+     *     operationId="sendEmailVerification",
      *     summary="Reenviar notificação de verificação de e-mail",
      *     description="Envia um novo link de verificação para o e-mail do usuário",
      *     tags={"Email Verification"},

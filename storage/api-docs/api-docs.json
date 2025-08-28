@@ -31,7 +31,7 @@
                 ],
                 "summary": "Realizar login",
                 "description": "Autentica um usuário e retorna a sessão",
-                "operationId": "bc76a9d52929cab7a147ca7b5c527430",
+                "operationId": "login",
                 "requestBody": {
                     "description": "Credenciais de login",
                     "required": true,
@@ -112,7 +112,7 @@
                 ],
                 "summary": "Realizar logout",
                 "description": "Encerra a sessão do usuário autenticado",
-                "operationId": "0ab4e3cf7bc4f7ec81b48f7928c7de7c",
+                "operationId": "logout",
                 "responses": {
                     "204": {
                         "description": "Logout realizado com sucesso",
@@ -156,7 +156,7 @@
                 ],
                 "summary": "Reenviar notificação de verificação de e-mail",
                 "description": "Envia um novo link de verificação para o e-mail do usuário",
-                "operationId": "21ff3f9f9b9e1407909089f864312e1c",
+                "operationId": "sendEmailVerification",
                 "responses": {
                     "200": {
                         "description": "Link de verificação enviado",
@@ -237,7 +237,7 @@
                 ],
                 "summary": "Redefinir senha",
                 "description": "Redefine a senha do usuário usando o token de redefinição",
-                "operationId": "28566bf52aa8f35c19b304b2c2be3829",
+                "operationId": "resetPassword",
                 "requestBody": {
                     "description": "Dados para redefinição de senha",
                     "required": true,
@@ -340,7 +340,7 @@
                 ],
                 "summary": "Solicitar link de redefinição de senha",
                 "description": "Envia um e-mail com o link para redefinir a senha",
-                "operationId": "e6a36e6e48542536284f7f26f6cc4d7f",
+                "operationId": "forgotPassword",
                 "requestBody": {
                     "description": "E-mail para receber o link de redefinição",
                     "required": true,
@@ -437,7 +437,7 @@
                 ],
                 "summary": "Registrar novo usuário",
                 "description": "Cria uma nova conta de usuário e autentica automaticamente",
-                "operationId": "18235ea6963e661c49bf381065779d6a",
+                "operationId": "register",
                 "requestBody": {
                     "description": "Dados do novo usuário",
                     "required": true,
@@ -551,7 +551,7 @@
                 ],
                 "summary": "Verificar endereço de e-mail",
                 "description": "Verifica o endereço de e-mail do usuário usando o link enviado por e-mail",
-                "operationId": "2a87bcc29fb717d6dd51a631c1b13064",
+                "operationId": "verifyEmail",
                 "parameters": [
                     {
                         "name": "id",

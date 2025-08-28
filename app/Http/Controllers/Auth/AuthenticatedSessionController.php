@@ -21,6 +21,7 @@ class AuthenticatedSessionController extends Controller
      * 
      * @OA\Post(
      *     path="/api/login",
+     *     operationId="login",
      *     summary="Realizar login",
      *     description="Autentica um usuário e retorna a sessão",
      *     tags={"Authentication"},
@@ -92,6 +93,7 @@ class AuthenticatedSessionController extends Controller
      * 
      * @OA\Post(
      *     path="/api/logout",
+     *     operationId="logout",
      *     summary="Realizar logout",
      *     description="Encerra a sessão do usuário autenticado",
      *     tags={"Authentication"},

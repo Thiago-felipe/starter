@@ -27,6 +27,7 @@ class NewPasswordController extends Controller
      * 
      * @OA\Post(
      *     path="/api/reset-password",
+     *     operationId="resetPassword",
      *     summary="Redefinir senha",
      *     description="Redefine a senha do usuário usando o token de redefinição",
      *     tags={"Password Reset"},
